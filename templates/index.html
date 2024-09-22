@@ -12,7 +12,15 @@
 <body>
     <div class="container">
         <section class="item">
-            <p>McScheduler se encuentra en desarollo 🤠</p>
+            <h1>Semana actual</h1>
+            <!-- <p>McScheduler se encuentra en desarollo 🤠</p> -->
+            {% for day in current_week_schedule %}
+                <article class="day_container">
+                    <p class="day_square">{{ day.day }}</p> 
+                    <p class="day_name">{{ day.name }}</p>
+                    <p class="day_date">{{ day.formatted_date }}</p>
+                </article>
+            {% endfor %}
         </section>
         <section class="item">
             <p>McScheduler se encuentra en desarollo 🤠</p>
